@@ -1,5 +1,7 @@
 from flask import Flask,render_template
-server_test_5_app = Flask(__name__,template_folder='D:/PythonProgram/backend_test5/template_folder/')
+import os
+
+server_test_5_app = Flask(__name__,template_folder=os.path.dirname(os.path.realpath(__file__)))
 
 @server_test_5_app.route('/')
 def get_request():
